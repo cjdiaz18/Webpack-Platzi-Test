@@ -1,4 +1,5 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "index.js"),
@@ -13,8 +14,17 @@ module.exports = {
         // test: que tipo de archivo quero reconocer
         // use: que loader se va a encargar del archivo
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
+        // ["style-loader", "css-loader"]
+        // fallback:'style-loader',
+        // use: "css-loader"
       }
     ]
-  }
+  },
+  plugins: [
+    // aqui van los plugins
+    new MiniCssExtractPlugin({
+      filename: "css/[name].css"
+    })
+  ]
 };

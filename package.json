@@ -7,7 +7,8 @@
     "build": "webpack --mode development",
     "build:local": "webpack --mode development",
     "build:external": "webpack --config ./external/webpack.config.js --mode development",
-    "build:css": "webpack --config ./css-style-loader/webpack.config.js --mode development"
+    "build:css": "webpack --config ./css-style-loader/webpack.config.js --mode development",
+    "build:extractcss": "webpack --config ./plugin-extract-text/webpack.config.js --mode development"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +16,8 @@
   "description": "",
   "devDependencies": {
     "css-loader": "^2.1.1",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "mini-css-extract-plugin": "^0.6.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2"
