@@ -13,6 +13,17 @@ module.exports = {
       {
         // test: que tipo de archivo quero reconocer
         // use: que loader se va a encargar del archivo
+        test: /\.js$/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            // presets: ["latest"]
+          }
+        }
+      },
+      {
+        // test: que tipo de archivo quero reconocer
+        // use: que loader se va a encargar del archivo
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"]
         // ["style-loader", "css-loader"]

@@ -81,31 +81,55 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./plugin-extract-text/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./babel-loader/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./plugin-extract-text/estilos.css":
-/*!*****************************************!*\
-  !*** ./plugin-extract-text/estilos.css ***!
-  \*****************************************/
+/***/ "./babel-loader/estilos.css":
+/*!**********************************!*\
+  !*** ./babel-loader/estilos.css ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./plugin-extract-text/estilos.css?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./babel-loader/estilos.css?");
 
 /***/ }),
 
-/***/ "./plugin-extract-text/index.js":
-/*!**************************************!*\
-  !*** ./plugin-extract-text/index.js ***!
-  \**************************************/
+/***/ "./babel-loader/index.js":
+/*!*******************************!*\
+  !*** ./babel-loader/index.js ***!
+  \*******************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./estilos.css */ \"./plugin-extract-text/estilos.css\");\n/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_estilos_css__WEBPACK_IMPORTED_MODULE_0__);\n\n\ndocument.write(\"Hola mundo\");\n//console.log(\"Hola mundo!, desde Webpack\");\nconsole.log(\"Hola mundo!, desde Webpack en un webpack.config\");\n\n\n//# sourceURL=webpack:///./plugin-extract-text/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./estilos.css */ \"./babel-loader/estilos.css\");\n/* harmony import */ var _estilos_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_estilos_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _message_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./message.js */ \"./babel-loader/message.js\");\n // import { firstMessage, delayedMessage } from \"./message.js\";\n\n\ndocument.write(\"<h1>\" + _message_js__WEBPACK_IMPORTED_MODULE_1__[\"firstMessage\"] + \"</h1>\");\nObject(_message_js__WEBPACK_IMPORTED_MODULE_1__[\"delayMessage\"])(); // delayedMessage();\n//console.log(\"Hola mundo!, desde Webpack\");\n\nconsole.log(\"Hola mundo!, desde Webpack en un webpack.config\");\n\n//# sourceURL=webpack:///./babel-loader/index.js?");
+
+/***/ }),
+
+/***/ "./babel-loader/message.js":
+/*!*********************************!*\
+  !*** ./babel-loader/message.js ***!
+  \*********************************/
+/*! exports provided: firstMessage, delayMessage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"firstMessage\", function() { return firstMessage; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"delayMessage\", function() { return delayMessage; });\n/* harmony import */ var _render_to_dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./render-to-dom.js */ \"./babel-loader/render-to-dom.js\");\n\nconst waitTime = new Promise((todoOk, todoMal) => {\n  setTimeout(() => {\n    todoOk(\"OMG | Han Pasado 5 Segundos | OMG\");\n  }, 5000);\n});\nconst firstMessage = \"Hola Mundo! from Modulo\";\nconst delayMessage = async () => {\n  const message = await waitTime;\n  console.log(message);\n  let element = document.createElement(\"h5\");\n  element.textContent = message;\n  Object(_render_to_dom_js__WEBPACK_IMPORTED_MODULE_0__[\"renderToDOM\"])(element);\n}; // module.exports = {\n//   firstMessage: \"Hola mundo desde un modulo<br>\",\n//   delayedMessage: async () => {\n//     const message = await waitTime;\n//     console.log(message);\n//     // Agregando elemento para el DOM en HTML\n//     const element = document.createElement(\"p\");\n//     element.textContent = message;\n//     renderToDOM(element);\n//   }\n// };\n\n//# sourceURL=webpack:///./babel-loader/message.js?");
+
+/***/ }),
+
+/***/ "./babel-loader/render-to-dom.js":
+/*!***************************************!*\
+  !*** ./babel-loader/render-to-dom.js ***!
+  \***************************************/
+/*! exports provided: renderToDOM */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"renderToDOM\", function() { return renderToDOM; });\nconst renderToDOM = element => {\n  document.body.append(element);\n};\n\n//# sourceURL=webpack:///./babel-loader/render-to-dom.js?");
 
 /***/ })
 
