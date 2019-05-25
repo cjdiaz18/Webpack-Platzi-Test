@@ -109,6 +109,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _est
 
 /***/ }),
 
+/***/ "./babel-loader/make-message.js":
+/*!**************************************!*\
+  !*** ./babel-loader/make-message.js ***!
+  \**************************************/
+/*! exports provided: makeMessage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"makeMessage\", function() { return makeMessage; });\nconst makeMessage = msg => {\n  const element = document.createElement(\"h5\");\n  element.textContent = msg;\n  return element;\n};\n\n//# sourceURL=webpack:///./babel-loader/make-message.js?");
+
+/***/ }),
+
 /***/ "./babel-loader/message.js":
 /*!*********************************!*\
   !*** ./babel-loader/message.js ***!
@@ -117,7 +129,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _est
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"firstMessage\", function() { return firstMessage; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"delayMessage\", function() { return delayMessage; });\n/* harmony import */ var _render_to_dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./render-to-dom.js */ \"./babel-loader/render-to-dom.js\");\n\nconst waitTime = new Promise((todoOk, todoMal) => {\n  setTimeout(() => {\n    todoOk(\"OMG | Han Pasado 5 Segundos | OMG\");\n  }, 5000);\n});\nconst firstMessage = \"Hola Mundo! from Modulo\";\nconst delayMessage = async () => {\n  const message = await waitTime;\n  console.log(message);\n  let element = document.createElement(\"h5\");\n  element.textContent = message;\n  Object(_render_to_dom_js__WEBPACK_IMPORTED_MODULE_0__[\"renderToDOM\"])(element);\n}; // module.exports = {\n//   firstMessage: \"Hola mundo desde un modulo<br>\",\n//   delayedMessage: async () => {\n//     const message = await waitTime;\n//     console.log(message);\n//     // Agregando elemento para el DOM en HTML\n//     const element = document.createElement(\"p\");\n//     element.textContent = message;\n//     renderToDOM(element);\n//   }\n// };\n\n//# sourceURL=webpack:///./babel-loader/message.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"firstMessage\", function() { return firstMessage; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"delayMessage\", function() { return delayMessage; });\n/* harmony import */ var _render_to_dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./render-to-dom.js */ \"./babel-loader/render-to-dom.js\");\n/* harmony import */ var _make_message_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./make-message.js */ \"./babel-loader/make-message.js\");\n\n\nconst waitTime = new Promise((todoOk, todoMal) => {\n  setTimeout(() => {\n    todoOk(\"OMG | Han Pasado 5 Segundos | OMG\");\n  }, 5000);\n});\nconst firstMessage = \"Hola Mundo! from Modulo\";\nconst delayMessage = async () => {\n  const message = await waitTime;\n  console.log(message); // const element = document.createElement(\"h5\");\n  // element.textContent = message;\n\n  Object(_render_to_dom_js__WEBPACK_IMPORTED_MODULE_0__[\"renderToDOM\"])(Object(_make_message_js__WEBPACK_IMPORTED_MODULE_1__[\"makeMessage\"])(message));\n}; // module.exports = {\n//   firstMessage: \"Hola mundo desde un modulo<br>\",\n//   delayedMessage: async () => {\n//     const message = await waitTime;\n//     console.log(message);\n//     // Agregando elemento para el DOM en HTML\n//     const element = document.createElement(\"p\");\n//     element.textContent = message;\n//     renderToDOM(element);\n//   }\n// };\n\n//# sourceURL=webpack:///./babel-loader/message.js?");
 
 /***/ }),
 
