@@ -12,7 +12,8 @@
     "build:multi": "webpack --config ./multiple-entry-points/webpack.config.js --mode development",
     "build:dev": "webpack-dev-server --config ./webpack-dev-server/webpack.config.js --mode development",
     "build:babel": "webpack --config ./babel-loader/webpack.config.js --mode development",
-    "build:images": "webpack --config ./url-loader-images/webpack.config.js --mode development"
+    "build:images": "webpack --config ./url-loader-images/webpack.config.js --mode development",
+    "build:fonts": "webpack --config ./url-loader-fonts/webpack.config.js --mode development"
   },
   "keywords": [],
   "author": "",

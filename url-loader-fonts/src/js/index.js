@@ -1,7 +1,7 @@
-import "./estilos.css";
+import "../css/estilos.css";
 // import { firstMessage, delayedMessage } from "./message.js";
 import { firstMessage, delayMessage } from "./message.js";
-import platziImg from "./platzi.png";
+import platziImg from "../images/platzi.png";
 
 document.write("<h1>" + firstMessage + "</h1>");
 delayMessage();
